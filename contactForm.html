@@ -5,35 +5,134 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
     <link rel="stylesheet" href="contact.css">
+    <script src="contact.js"></script>
 </head>
 <body>
 
 <div class="form-contact">
-<section  >
-    <h1>Contactez moi</h1>
-    <form>
-        <label for="fname">Nom de l'entreprise</label><br>
-        <input type="text" ><br><br>
-        <label for="lname">Email</label><br>
-        <input type="email" ><br><br>
-        <label>Num Tel</label><br>
-        <input type="number"><br><br>
-        <label>Msssage</label><br>
-        <textarea></textarea><br><br>
-        <button>Valider</button>
+    <section>
+        <h1>Contactez moi</h1>
+        <form action="#" method="post" name="Contactez_moi" id="contact">
+            <table> 
+                <tr>
+                    <td>
+                        <label for="ename">Nom de l'entreprise <span>*</span></label>
+                    </td>
+                    <td> 
+                        <input
+                            type="text"
+                            id="ename"
+                            name="ename"
+                            placeholder="Tapez le nom de votre entreprise"
+                            onkeyup="nameValidation()"
+                        />
+                    </td>
+                    <td >
+                        <p style="color: red" id="nomEr"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="add">Adresse</label></td>
+                    <td>
+                        <textarea name="add" id="add" placeholder="Tapez votre adresse" cols="20" rows="7"></textarea>
+                    </td>
+                    <td >
+                        <p style="color: red" id="adressEr"></p>
+                    </td>
+                </tr>
+          <tr>
+            <td>
+              <label for="phone">Numéro Téléphone <span>*</span></label>
+            </td>
+            <td>
+              <input
+                type="text"
+                id="phone"
+                name="phone"
+                placeholder="Tapez votre Numéro de Téléphone"
 
-      </form>
-        
+                
+              />
+            </td>
+            <td >
+            
+              <p style="color: red" id="phoneEr""></p>
+            
+            </td>
+          </tr>
+          
+          <tr>
+            <td>
+              <label for="email">E-mail <span>*</span></label>
+            </td>
+            <td>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Tapez votre email"
+
+               
+              />
+            </td>
+            <td >
+            
+              <p style="color: red" id="emailEr""></p>
+            
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="cemail">Confirmation E-mail  <span>*</span></label>
+            </td>
+            <td>
+              <input
+                type="email"
+                name="cemail"
+                placeholder="Confirmer votre email"
+                id="cemail"
+                
+              />
+            </td>
+            <td >
+            
+              <p style="color: red" id="cemailEr""></p>
+            
+            </td>
+          </tr>
+          <tr>
+            <td><label for="msg">Message</label></td>
+            <td>
+                <textarea name="msg" id="msg" placeholder="Tapez votre Message" cols="20" rows="7"></textarea>
+            </td>
+            
+        </tr>
+
+          <tr>
+            <td></td>
+            <td>
+                <button type="submit"  onclick="emailValidation()" id="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </td>
+        </tr>
+    </table>
+</form>
+
+<p style="color: red" id="erreur"></p>
 </section>
+
+<br />
+<hr />
+<br />
+
 <!-- Liens vers les autres pages -->
 <section class="links">
-    <ul>
-        
-        <li><a href="experinces.html">Expériences Professionnelles</a></li>
-        <li><a href="education.html">Parcours Académique</a></li>
-        <li><a href="skillsProjects.html">Compétences</a></li>
-        <li><a href="contactForm.html">Contactez moi</a></li>
-    </ul>
+<ul>
+    <li><a href="experiences.html">Expériences Professionnelles</a></li>
+    <li><a href="education.html">Parcours Académique</a></li>
+    <li><a href="skillsProjects.html">Compétences</a></li>
+    <li><a href="contactForm.html">Contactez moi</a></li>
+</ul>
 </section>
 </div>
 </body>
